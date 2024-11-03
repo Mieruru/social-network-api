@@ -2,7 +2,7 @@
 const { User, Thought } = require('../models')
 
 module.exports = {
-  // get all users
+  // get all thoughts
   async getThoughts(req, res) {
     try {
 
@@ -12,7 +12,7 @@ module.exports = {
     }
   },
 
-  // get a single user by ID
+  // get a single thought by ID
   async getThought(req, res) {
     try {
 
@@ -22,7 +22,7 @@ module.exports = {
     }
   },
 
-  // create new user
+  // create new thought
   async createThought(req, res) {
     try {
 
@@ -32,7 +32,7 @@ module.exports = {
     }
   },
 
-  // update user by ID
+  // update thought by ID
   async updateThought(req, res) {
     try {
 
@@ -42,7 +42,7 @@ module.exports = {
     }
   },
 
-  // update user by ID
+  // update thought by ID
   async deleteThought(req, res) {
     try {
 
@@ -52,7 +52,7 @@ module.exports = {
     }
   },
 
-  // add friend by ID
+  // add reaction by ID
   async addReaction(req, res) {
     try {
 
@@ -62,7 +62,7 @@ module.exports = {
     }
   },
 
-  // remove friend by ID
+  // remove reaction by ID
   async removeReaction(req, res) {
     try {
 
