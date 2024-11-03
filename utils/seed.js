@@ -37,6 +37,7 @@ connection.once('open', async () => {
     const username = getRandomUserName()
     const email = `${username}@socmedapp.com`
 
+    // generate user objects and push to array
     users.push({
       username,
       email,
@@ -60,6 +61,7 @@ connection.once('open', async () => {
     // pull 3 reactions
     const reactions = getRandomReactions(3)
 
+    // generate thought objects and push to array
     thoughts.push({
       thoughtContent,
       username,
