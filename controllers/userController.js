@@ -11,7 +11,6 @@ module.exports = {
       res.json(users)
 
     } catch (err) {
-      console.log(err)
       res.status(500).json(err)
     }
   },
@@ -30,7 +29,6 @@ module.exports = {
       res.json(user)
 
     } catch (err) {
-      console.log(err)
       res.status(500).json(err)
     }
   },
@@ -44,7 +42,6 @@ module.exports = {
       res.json(user)
 
     } catch (err) {
-      console.log(err)
       res.status(500).json(err)
     }
   },
@@ -67,7 +64,6 @@ module.exports = {
       res.json(user)
 
     } catch (err) {
-      console.log(err)
       res.status(500).json(err)
     }
   },
@@ -86,10 +82,9 @@ module.exports = {
       await Thought.deleteMany({ _id: { $in: user.thoughts } })
 
       // confirm user deletion
-      res.json({ message: `Used successfully deleted. Thoughts by user successfully deleted.` })
+      res.json({ message: `User successfully deleted. Thoughts by user successfully deleted.` })
 
     } catch (err) {
-      console.log(err)
       res.status(500).json(err)
     }
   },
@@ -112,7 +107,6 @@ module.exports = {
       res.json(user)
 
     } catch (err) {
-      console.log(err)
       res.status(500).json(err)
     }
   },
@@ -135,7 +129,6 @@ module.exports = {
       res.json(user)
 
     } catch (err) {
-      console.log(err)
       res.status(500).json(err)
     }
   }
