@@ -8,7 +8,7 @@ In this assignment, asocial networking application is provided which creates a b
 
 ## Demo
 
-[Demo video link](https://drive.google.com/file/d/1-0J8tUt9qHdL7HW6P5MruOFvQp4KitAW/view?usp=sharing)
+[Demo video link](https://drive.google.com/file/d/1-Cgo6u5J5lfC2JiRj5rXXJpLYGEOHk64/view?usp=drive_link)
 
 ## Sample Images
 
