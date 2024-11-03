@@ -19,7 +19,8 @@ router.route('/').get(getThoughts).post(createThought)
 router.route('/:thoughtId').get(getThought).put(updateThought).delete(deleteThought)
 
 // Thought Reaction API
-router.route('/:thoughtId/reactions/:reactionId').post(addReaction).delete(removeReaction)
+router.route('/:thoughtId/reactions/').post(addReaction)
+router.route('/:thoughtId/reactions/:reactionId').delete(removeReaction)
 
 // export Thought router
 module.exports = router
