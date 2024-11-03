@@ -55,7 +55,7 @@ connection.once('open', async () => {
   // add thoughts to thoughts array -- loop 20 times
   for (let i = 0; i < 20; i++) {
     // pull thought from array
-    const thoughtContent = getRandomThought()
+    const thoughtText = getRandomThought()
     // pull valid username from array
     const username = getRandomArrItem(users).username
     // pull 3 reactions
@@ -63,7 +63,8 @@ connection.once('open', async () => {
 
     // generate thought objects and push to array
     thoughts.push({
-      thoughtContent,
+      thoughtText,
+      createdAt: new Date(),
       username,
       reactions
     })

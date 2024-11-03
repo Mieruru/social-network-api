@@ -144,8 +144,9 @@ const getRandomReactions = (num) => {
   const reactions = []
   for (let i = 0; i < num; i++) {
     reactions.push({
-      reactionSet: getRandomReactionSet(),
-      username: getRandomUserName()
+      reactionBody: getRandomReactionSet(),
+      username: getRandomUserName(),
+      createdAt: new Date()
     })
   }
   return reactions
