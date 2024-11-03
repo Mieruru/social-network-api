@@ -1,4 +1,5 @@
 // user seed table
+// name list borrowed from module 18 mini project
 const users = [
   'Aaran',
   'Aaren',
@@ -77,62 +78,78 @@ const users = [
 
 // thought seed table
 const thoughts = [
-  'Decision Tracker',
-  'Find My Phone',
-  'Learn Piano',
-  'Starbase Defender',
-  'Tower Defense',
-  'Monopoly Money Manager',
-  'Movie trailers',
-  'Hello world',
-  'Stupid Social Media App',
-  'Notes',
-  'Messages',
-  'Email',
-  'Compass',
-  'Firefox',
-  'Running app',
-  'Cooking app',
-  'Poker',
-  'Deliveries',
+  'Sample thought 01',
+  'Sample thought 02',
+  'Sample thought 03',
+  'Sample thought 04',
+  'Sample thought 05',
+  'Sample thought 06',
+  'Sample thought 07',
+  'Sample thought 08',
+  'Sample thought 09',
+  'Sample thought 10',
+  'Sample thought 11',
+  'Sample thought 12',
+  'Sample thought 13',
+  'Sample thought 14',
+  'Sample thought 15',
+  'Sample thought 16',
+  'Sample thought 17',
+  'Sample thought 18',
+  'Sample thought 19',
+  'Sample thought 20',
 ]
 
 // reaction seed table
 const reactions = [
-  'Decision Tracker',
-  'Find My Phone',
-  'Learn Piano',
-  'Starbase Defender',
-  'Tower Defense',
-  'Monopoly Money Manager',
-  'Movie trailers',
-  'Hello world',
-  'Stupid Social Media App',
-  'Notes',
-  'Messages',
-  'Email',
-  'Compass',
-  'Firefox',
-  'Running app',
-  'Cooking app',
-  'Poker',
-  'Deliveries',
+  'Sample reaction 01',
+  'Sample reaction 02',
+  'Sample reaction 03',
+  'Sample reaction 04',
+  'Sample reaction 05',
+  'Sample reaction 06',
+  'Sample reaction 07',
+  'Sample reaction 08',
+  'Sample reaction 09',
+  'Sample reaction 10',
+  'Sample reaction 11',
+  'Sample reaction 12',
+  'Sample reaction 13',
+  'Sample reaction 14',
+  'Sample reaction 15',
+  'Sample reaction 16',
+  'Sample reaction 17',
+  'Sample reaction 18',
+  'Sample reaction 19',
+  'Sample reaction 20',
 ]
 
 // get random item given an array
 const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)]
 
 // get a random full name
-const getRandomName = () =>
-  `${getRandomArrItem(users)} ${getRandomArrItem(users)}`
+const getRandomName = () => `${getRandomArrItem(users)} ${getRandomArrItem(users)}`
 
-const getRandomUserName = () => ``
+// get a random username
+const getRandomUserName = () => getRandomArrItem(users).toLowerCase() + Math.floor(Math.random() * 100)
 
-const getRandomThought = () => ``
+// get a random thought
+const getRandomThought = () => getRandomArrItem(thoughts)
 
-const getRandomReactionSet = () => ``
+// get a randoom set of reactions
+const getRandomReactionSet = () => getRandomArrItem(reactions)
 
-const getRandomReactions = () => ``
+// populate an array of reactions
+const getRandomReactions = (num) => {
+  const reactions = []
+  for (let i = 0; i < num; i++) {
+    reactions.push({
+      reactionSet: getRandomReactionSet(),
+      username: getRandomUserName()
+    })
+  }
+  return reactions
+}
 
 module.exports = {
   getRandomArrItem,
