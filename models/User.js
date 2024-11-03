@@ -43,12 +43,12 @@ const userSchema = new Schema(
   }
 )
 
-// friendcount: virtual to get length of user's friend array
+// friendCount: virtual to get length of user's friend array
 userSchema.virtual('friendCount').get(function () {
   return this.friends.length
 })
 
-// create user model from userSchema
+// create User model from userSchema
 const User = model('User', userSchema)
 
 // export User model
