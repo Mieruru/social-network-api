@@ -34,13 +34,41 @@ connection.once('open', async () => {
     const fullName = getRandomName()
     const first = fullName.split(' ')[0]
     const last = fullName.split(' ')[1]
+    const username = getRandomUserName()
+    const email = `${username}@socmedapp.com`
 
+    users.push({
+      username,
+      email,
+      thoughts: [],
+      friends: []
+    })
   }
 
   // add users to collection and await results
+  const userData = await User.create(users)
 
+  // create empty array to hold thoughts
+  const thoughts = []
+
+  // add thoughts to thoughts array -- loop 20 times
+  for (let i = 0; i < 20; i++) {
+    // pull thought from array
+    const thoughtContent = getRandomThought()
+    // pull valid username from array
+    const username = getRandomArrItem(users).username
+    // pull 3 reactions
+    const reactions = getRandomReactions(3)
+
+    thoughts.push({
+      thoughtContent,
+      username,
+      reactions
+    })
+  }
 
   // add thoughts to collection and await results
+  await Thought.create(thoughts)
 
   // log seed data to console
   console.table(users)
