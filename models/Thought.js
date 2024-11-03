@@ -34,12 +34,13 @@ const thoughtSchema = new Schema(
     toJSON: {
       virtuals: true,
       getters: true
-    }
+    },
+    id: false
   }
 )
 
 // reactionCount: virtual to get length of uthought's reactions array
-userSchema.virtual('reactionCount').get(function () {
+thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length
 })
 

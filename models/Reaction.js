@@ -1,4 +1,4 @@
-const { Schema, model, Types } = require('mongoose')
+const { Schema, Types } = require('mongoose')
 
 const reactionSchema = new Schema(
   {
@@ -31,8 +31,10 @@ const reactionSchema = new Schema(
   {
     toJSON: {
       getters: true
-    }
+    },
+    id: false
   }
 )
 
+// export subdocument
 module.exports = reactionSchema
